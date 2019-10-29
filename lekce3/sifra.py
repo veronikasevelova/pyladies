@@ -8,18 +8,15 @@ if key >= 0:
             c = (ord(pi)+key)
             if c > 122:
                 c = c - 26
+            pi = chr(c)
 
-            znak = chr(c)
-            ciphertext = ciphertext + znak
         elif 'A' <= pi <= 'Z': 
             c = (ord(pi)+key)
             if c > 90:
-                c = c - 26
+                c = c - 26            
+            pi = chr(c)
 
-            znak = chr(c)
-            ciphertext = ciphertext + znak
-        else:
-            print("Něco se pokazilo. Zkus to znovu.")
+        ciphertext = ciphertext + pi
             
     print("Zašifrovaná zpráva je:", ciphertext)
  
